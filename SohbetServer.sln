@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SohbetServer", "SohbetServer.csproj", "{03FC91BA-1210-4E3F-9FD6-AB290BBB6884}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03FC91BA-1210-4E3F-9FD6-AB290BBB6884}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03FC91BA-1210-4E3F-9FD6-AB290BBB6884}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03FC91BA-1210-4E3F-9FD6-AB290BBB6884}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03FC91BA-1210-4E3F-9FD6-AB290BBB6884}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {822548A1-F70F-496A-A1CC-DB72CEE0D7C6}
+	EndGlobalSection
+EndGlobal

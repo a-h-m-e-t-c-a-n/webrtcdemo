@@ -1,0 +1,42 @@
+﻿//ssl.conf  
+[req]
+x509_extensions     = x509_ext
+distinguished_name  = subject
+
+[subject]
+countryName         = Country Name (2 letter code)
+countryName_default     = TR
+
+stateOrProvinceName     = State or Province Name (full name)
+stateOrProvinceName_default = KADIKOY
+
+localityName            = Locality Name (eg, city)
+localityName_default    = ISTANBUL
+
+organizationName         = Organization Name (eg, company)
+organizationName_default    = AHMETCAN
+
+commonName          = Common Name (e.g. server FQDN or YOUR name)
+commonName_default      = AHMETCAN
+
+emailAddress            = Email Address
+emailAddress_default        = eposta@ahmetcan.com.tr
+
+[x509_ext]
+basicConstraints        = CA:TRUE
+keyUsage = nonRepudiation, digitalSignature, keyEncipherment
+subjectAltName          = @alternate_names
+
+[alternate_names]
+
+DNS.1       = localhost
+IP.1		= 127.0.0.1
+IP.2		= 192.168.1.50
+
+
+//generate
+openssl genrsa -out ca.key 2048
+openssl req -config ssl.conf -new -x509 -sha256 -key ca.key  -out ca.crt 
+openssl x509 -inform PEM -outform DER -in ca.crt -out ca.der.crt
+openssl pkcs12 -export -out ca.pfx -inkey ca.key -in ca.crt
+//password 1234
